@@ -4,7 +4,7 @@ const defaultState = {
   getProductsError: null,
 };
 
-export const Products = (state = defaultState, action) => {
+export const products = (state = defaultState, action) => {
   let payload = action.payload;
 
   switch (action.type) {

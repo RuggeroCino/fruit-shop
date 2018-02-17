@@ -21,11 +21,11 @@ class DashboardContainer extends Component {
 DashboardContainer.route = '/';
 
 DashboardContainer.propTypes = {
-  product: PropTypes.object.isRequired,
+  products: PropTypes.object.isRequired,
   getProducts: PropTypes.func.isRequired,
 };
 
 export default connect(
-  state => ({ product: state.product }),
+  state => ({ products: state.products }),
   dispatch => ({ getProducts: () => dispatch(getProducts()) })
 )(DashboardContainer);

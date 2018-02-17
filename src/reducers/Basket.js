@@ -1,6 +1,6 @@
 const defaultState = { };
 
-export const Basket = (state = defaultState, action) => {
+export const basket = (state = defaultState, action) => {
   switch (action.type) {
     default:
       return state;

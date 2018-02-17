@@ -1,7 +1,7 @@
-import { Products } from './Products';
-import { Basket } from './Basket';
+import { products } from './products';
+import { basket } from './basket';
 
-export const Reducers = {
-  Products,
-  Basket,
+export const reducers = {
+  products,
+  basket,
 };
