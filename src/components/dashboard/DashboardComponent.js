@@ -13,7 +13,7 @@ const DashboardComponent = (props) => {
       grow={1}
       style={{marginBottom: 40}}
     >
-      <Header />
+      <Header basketItems={props.basketItems} />
       <FlexContainer
         padding={true}
         maxWidth={true}
@@ -32,6 +32,7 @@ const DashboardComponent = (props) => {
 
 DashboardComponent.propTypes = {
   products: PropTypes.array.isRequired,
+  basketItems: PropTypes.number.isRequired,
   isFetchingProducts: PropTypes.bool.isRequired,
   onAddClick: PropTypes.func.isRequired,
 };

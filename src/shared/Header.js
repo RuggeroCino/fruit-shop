@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import FlexContainer from './FlexContainer';
 import BodyText from './BodyText';
@@ -7,7 +8,7 @@ import shoppingCardIcon from '../assets/icons/shopping-cart-white.svg';
 
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
   return (
     <FlexContainer
       className="Header"
@@ -29,7 +30,7 @@ const Header = () => {
           align="center"
           justify="flex-end"
         >
-          <BodyText>0</BodyText>
+          <BodyText>{props.basketItems}</BodyText>
           <img
             src={shoppingCardIcon}
             alt="Shopping cart"
@@ -39,6 +40,10 @@ const Header = () => {
       </FlexContainer>
     </FlexContainer>
   );
+};
+
+Header.propTypes = {
+  basketItems: PropTypes.number.isRequired,
 };
 
 export default Header;
