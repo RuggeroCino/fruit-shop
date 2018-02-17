@@ -20,7 +20,6 @@ const ProductsComponent = (props) => {
           <img
             src={product.image}
             alt="Product"
-            style={{maxHeight: 240}}
           />
         </CardMedia>
         <CardTitle

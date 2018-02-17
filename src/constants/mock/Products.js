@@ -13,8 +13,8 @@ export const Products = [
     name: 'Orange',
     type: 'Fruit',
     price: 30,
-    image: 'https://cdn.pixabay.com/photo/2017/01/20/15/06/orange-1995056_1280.jpg',
-    description: 'The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. (from: wikipedia.org)',
+    image: 'https://cdn.pixabay.com/photo/2017/02/26/12/27/oranges-2100108_1280.jpg',
+    description: 'The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. Varieties of sweet orange arise through mutations. (from: wikipedia.org)',
     discount: null,
   },
   {
