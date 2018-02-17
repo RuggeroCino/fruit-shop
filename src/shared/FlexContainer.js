@@ -16,7 +16,7 @@ const FlexContainer = props => {
         props.basis && `basis-${props.basis}`,
         props.wrap && `flex-${props.wrap}`,
         props.padding && 'padding-container',
-        props.mainContainer && 'main-container',
+        props.maxWidth && 'max-width-container',
         props.className,
       )}
       style={props.style}
@@ -38,6 +38,7 @@ FlexContainer.propTypes = {
   basis: PropTypes.number,
   wrap: PropTypes.string,
   padding: PropTypes.bool,
+  maxWidth: PropTypes.bool,
   mainContainer: PropTypes.bool,
   style: PropTypes.object,
   children: PropTypes.node,

@@ -5,7 +5,7 @@ export const Products = [
     type: 'Fruit',
     price: 25,
     image: 'https://cdn.pixabay.com/photo/2018/02/08/13/10/apple-3139465_1280.jpg',
-    description: 'An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus. (from: wikipedia.org)',
+    description: 'An apple is a sweet, edible fruit produced by an apple tree (Malus pumila). Apple trees are cultivated worldwide as a fruit tree, and is the most widely grown species in the genus Malus. The tree originated in Central Asia. (from: wikipedia.org)',
     discount: null,
   },
   {
@@ -14,7 +14,7 @@ export const Products = [
     type: 'Fruit',
     price: 30,
     image: 'https://cdn.pixabay.com/photo/2017/01/20/15/06/orange-1995056_1280.jpg',
-    description: 'The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae.[1] It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. (from: wikipedia.org)',
+    description: 'The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae. It is also called sweet orange, to distinguish it from the related Citrus × aurantium, referred to as bitter orange. (from: wikipedia.org)',
     discount: null,
   },
   {
@@ -23,7 +23,7 @@ export const Products = [
     type: 'Fruit',
     price: 15,
     image: 'https://cdn.pixabay.com/photo/2015/03/30/12/43/bananas-698608_1280.jpg',
-    description: 'The banana is an edible fruit – botanically a berry[1][2] – produced by several kinds of large herbaceous flowering plants in the genus Musa.[3] In some countries, bananas used for cooking may be called plantains, in contrast to dessert bananas. (from: wikipedia.org)',
+    description: 'The banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called plantains, in contrast to dessert bananas. (from: wikipedia.org)',
     discount: null,
   },
   {

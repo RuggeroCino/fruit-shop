@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import FlexContainer from '../../shared/FlexContainer';
 import Header from '../../shared/Header';
-import BodyText from '../../shared/BodyText';
 
 import ProductsContainer from './ProductsContainer';
 
@@ -16,14 +15,11 @@ const DashboardComponent = (props) => {
       <Header />
       <FlexContainer
         padding={true}
-        mainContainer={true}
+        maxWidth={true}
         direction="column"
         align="center"
+        style={{width: '100%'}}
       >
-        <BodyText
-          uppercase={true}
-          title={true}
-        >Dashboard</BodyText>
         <ProductsContainer
           products={props.products}
         />

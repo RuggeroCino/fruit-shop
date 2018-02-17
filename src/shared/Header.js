@@ -9,11 +9,16 @@ const Header = () => {
   return (
     <FlexContainer
       className="Header"
-      justify="center"
+      justify="space-between"
       align="center"
-      padding={true}
     >
-      <BodyText title={true}>React / Redux Fruit Shop Example</BodyText>
+      <FlexContainer
+        grow={1}
+        padding={true}
+        maxWidth={true}
+      >
+        <BodyText title={true}>React / Redux Fruit Shop Example</BodyText>
+      </FlexContainer>
     </FlexContainer>
   );
 };
