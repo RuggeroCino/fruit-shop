@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: local('Roboto Regular'), local('Roboto-Regular'),
-    url("../assets/font/Roboto-Regular.ttf") format('truetype');
+    url("../assets/fonts/Roboto-Regular.ttf") format('truetype');
 }
 
 /* Bold */
@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: bold;
   src: local('Roboto Bold'), local('Roboto-Bold'),
-    url("../assets/font/Roboto-Bold.ttf") format('truetype');
+    url("../assets/fonts/Roboto-Bold.ttf") format('truetype');
 }
 
 p {
