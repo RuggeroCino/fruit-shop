@@ -10,4 +10,6 @@ class DashboardContainer extends Component {
   }
 }
 
+DashboardContainer.route = '/';
+
 export default DashboardContainer;
