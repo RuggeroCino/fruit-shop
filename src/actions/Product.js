@@ -1,4 +1,4 @@
-import { fruitShopService } from '../../services/FruitShopService';
+import { fruitShopService } from '../services/FruitShopService';
 
 export const getProducts = () => dispatch => {
   dispatch({ type: 'product.getProductsRequest' });
