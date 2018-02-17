@@ -11,6 +11,7 @@ const DashboardComponent = (props) => {
     <FlexContainer
       direction="column"
       grow={1}
+      style={{marginBottom: 40}}
     >
       <Header />
       <FlexContainer
