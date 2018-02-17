@@ -23,6 +23,7 @@ const DashboardComponent = (props) => {
       >
         <ProductsContainer
           products={props.products}
+          onAddClick={props.onAddClick}
         />
       </FlexContainer>
     </FlexContainer>
@@ -32,6 +33,7 @@ const DashboardComponent = (props) => {
 DashboardComponent.propTypes = {
   products: PropTypes.array.isRequired,
   isFetchingProducts: PropTypes.bool.isRequired,
+  onAddClick: PropTypes.func.isRequired,
 };
 
 export default DashboardComponent;

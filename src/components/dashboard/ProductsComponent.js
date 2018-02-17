@@ -14,7 +14,11 @@ const ProductsComponent = (props) => {
       </BodyText>
       <FlexContainer direction="row" wrap="wrap">
       {props.products.map(product => (
-        <ProductCardContainer key={product.id} product={product} />
+        <ProductCardContainer
+          key={product.id}
+          product={product}
+          onAddClick={props.onAddClick}
+        />
       ))}
       </FlexContainer>
     </FlexContainer>
@@ -23,6 +27,7 @@ const ProductsComponent = (props) => {
 
 ProductsComponent.propTypes = {
   products: PropTypes.array.isRequired,
+  onAddClick: PropTypes.func.isRequired,
 };
 
 export default ProductsComponent;

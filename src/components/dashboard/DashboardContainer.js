@@ -11,11 +11,17 @@ class DashboardContainer extends Component {
     this.props.getProducts();
   }
 
+  onAddClick = (product, quantity) => {
+    // TODO: handle add product click
+    console.log(product.name, quantity);
+  }
+
   render() {
     return (
       <DashboardComponent
         products={this.props.products.products}
         isFetchingProducts={this.props.products.isFetchingProducts}
+        onAddClick={this.onAddClick}
       />
     );
   }
