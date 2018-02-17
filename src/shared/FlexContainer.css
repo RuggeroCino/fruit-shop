@@ -9,6 +9,16 @@
   flex-direction: row;
 }
 
+.FlexContainer.padding-container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.FlexContainer.main-container {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 .FlexContainer.grow-container-0 {
   flex-grow: 0;
 }

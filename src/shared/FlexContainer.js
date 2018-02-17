@@ -15,6 +15,8 @@ const FlexContainer = props => {
         props.align && `align-${props.align}`,
         props.basis && `basis-${props.basis}`,
         props.wrap && `flex-${props.wrap}`,
+        props.padding && 'padding-container',
+        props.mainContainer && 'main-container',
         props.className,
       )}
       style={props.style}
@@ -35,6 +37,8 @@ FlexContainer.propTypes = {
   align: PropTypes.string,
   basis: PropTypes.number,
   wrap: PropTypes.string,
+  padding: PropTypes.bool,
+  mainContainer: PropTypes.bool,
   style: PropTypes.object,
   children: PropTypes.node,
   onClick: PropTypes.func,

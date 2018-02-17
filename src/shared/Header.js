@@ -3,7 +3,6 @@ import React from 'react';
 import FlexContainer from './FlexContainer';
 import BodyText from './BodyText';
 
-import logo from '../assets/img/logo.svg';
 import './Header.css';
 
 const Header = () => {
@@ -12,13 +11,9 @@ const Header = () => {
       className="Header"
       justify="center"
       align="center"
+      padding={true}
     >
-      <img
-        src={logo}
-        className="Header-logo"
-        alt="logo"
-      />
-      <BodyText title={true}>Fruit Shop</BodyText>
+      <BodyText title={true}>React / Redux Fruit Shop Example</BodyText>
     </FlexContainer>
   );
 };
