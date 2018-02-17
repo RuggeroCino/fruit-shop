@@ -5,6 +5,7 @@ import FlexContainer from './shared/FlexContainer';
 
 import DashboardContainer from './components/dashboard/DashboardContainer';
 import BasketContainer from './components/basket/BasketContainer';
+import Notification from './shared/Notification';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path={BasketContainer.route} component={BasketContainer} />
           </Switch>
         </Router>
+        <Notification />
       </FlexContainer>
     );
   }
