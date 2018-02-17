@@ -13,7 +13,10 @@ class DashboardContainer extends Component {
 
   render() {
     return (
-      <DashboardComponent />
+      <DashboardComponent
+        products={this.props.products.products}
+        isFetchingProducts={this.props.products.isFetchingProducts}
+      />
     );
   }
 }
