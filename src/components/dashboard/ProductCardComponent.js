@@ -6,16 +6,6 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { Discounts } from '../../constants/Discounts';
 
 import TextField from '../../shared/TextField';
-import FlexContainer from '../../shared/FlexContainer';
-
-const getProductPrice = (product) => {
-  let price = `Price: ${product.price} CHF`;
-  if (product.discount) {
-    price = price.concat(` (${Discounts[product.discount].description})`);
-  }
-
-  return price;
-};
 
 const ProductCardComponent = (props) => {
   let product = props.product;
