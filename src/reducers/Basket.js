@@ -37,6 +37,6 @@ export const basket = (state = defaultState, action) => {
 export const getTotalBasketItems = (state) => {
   return state.productIds
     .reduce((accumulator, currentValue) => {
-      return accumulator + state.basket[currentValue];
+      return accumulator + state.items[currentValue];
     }, 0);
 };
