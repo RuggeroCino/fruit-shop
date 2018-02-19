@@ -5,10 +5,12 @@ import FlexContainer from '../../shared/FlexContainer';
 import BodyText from '../../shared/BodyText';
 
 const BasketItemComponent = (props) => {
+  let product = props.product;
+
   return (
     <FlexContainer style={styles.BasketItem}>
       <img
-        src={props.product.image}
+        src={product.image}
         alt="Product"
         style={styles.ItemImage}
       />
@@ -17,10 +19,10 @@ const BasketItemComponent = (props) => {
         justify="space-between"
         align="center"
       >
-        <BodyText>{props.product.name}</BodyText>
-        <BodyText>Price: {props.product.price} CHF</BodyText>
-        <BodyText>Quantity: {props.product.quantity}</BodyText>
-        <BodyText>Total: {props.product.price * props.product.quantity} CHF</BodyText>
+        <BodyText>{product.name}</BodyText>
+        <BodyText>Price: {product.price} CHF</BodyText>
+        <BodyText>Quantity: {product.quantity}</BodyText>
+        <BodyText>Total: {props.totalProductPrice} CHF</BodyText>
       </FlexContainer>
     </FlexContainer>
   );
@@ -28,11 +30,12 @@ const BasketItemComponent = (props) => {
 
 BasketItemComponent.propTypes = {
   product: PropTypes.object.isRequired,
+  totalProductPrice: PropTypes.number.isRequired,
 };
 
 const styles = {
   BasketItem: {
-    width: '80%',
+    width: '90%',
     padding: 10,
     marginTop: 10,
     marginBottom: 10,
