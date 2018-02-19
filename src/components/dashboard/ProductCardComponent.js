@@ -10,7 +10,7 @@ import TextField from '../../shared/TextField';
 const getProductPrice = (product) => {
   let price = `Price: ${product.price} CHF`;
   if (product.discount) {
-    price = price.concat(` (${Discounts[product.discount]})`);
+    price = price.concat(` (${Discounts[product.discount].description})`);
   }
 
   return price;
