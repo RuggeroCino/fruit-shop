@@ -32,6 +32,7 @@ const BasketComponent = (props) => {
             product={product}
           />
         )}
+        <BodyText>Total: {props.totalBasketPrice} CHF</BodyText>
         <RaisedButton
           label="Back"
           primary={true}
@@ -46,6 +47,7 @@ const BasketComponent = (props) => {
 BasketComponent.propTypes = {
   totalBasketItems: PropTypes.number.isRequired,
   basketProducts: PropTypes.array.isRequired,
+  totalBasketPrice: PropTypes.number.isRequired,
   onBackClick: PropTypes.func.isRequired,
 };
 

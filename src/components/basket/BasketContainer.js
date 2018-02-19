@@ -3,7 +3,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { getTotalBasketItems } from '../../reducers/basket';
-import { getBasketProducts } from '../../reducers/reducers';
+import {
+  getBasketProducts,
+  getTotalBasketPrice,
+} from '../../reducers/reducers';
 
 import DashboardContainer from '../dashboard/DashboardContainer';
 
@@ -19,6 +22,7 @@ class BasketContainer extends Component {
       <BasketComponent
         totalBasketItems={this.props.totalBasketItems}
         basketProducts={this.props.basketProducts}
+        totalBasketPrice={this.props.totalBasketPrice}
         onBackClick={this.onBackClick}
       />
     );
@@ -31,6 +35,7 @@ BasketContainer.propTypes = {
   history: PropTypes.object.isRequired,
   totalBasketItems: PropTypes.number.isRequired,
   basketProducts: PropTypes.array.isRequired,
+  totalBasketPrice: PropTypes.number.isRequired,
 };
 
 export default connect(
@@ -38,5 +43,6 @@ export default connect(
     products: state.products,
     basketProducts: getBasketProducts(state),
     totalBasketItems: getTotalBasketItems(state.basket),
+    totalBasketPrice: getTotalBasketPrice(state),
   })
 )(BasketContainer);
