@@ -32,7 +32,7 @@ class DashboardContainer extends Component {
     return (
       <DashboardComponent
         products={this.props.products.products}
-        basketItems={this.props.basketItems}
+        totalBasketItems={this.props.totalBasketItems}
         onCartClick={this.onCartClick}
         isFetchingProducts={this.props.products.isFetchingProducts}
         onAddClick={this.onAddClick}
@@ -46,7 +46,7 @@ DashboardContainer.route = '/';
 DashboardContainer.propTypes = {
   history: PropTypes.object.isRequired,
   products: PropTypes.object.isRequired,
-  basketItems: PropTypes.number.isRequired,
+  totalBasketItems: PropTypes.number.isRequired,
   getProducts: PropTypes.func.isRequired,
   addProduct: PropTypes.func.isRequired,
   showNotification: PropTypes.func.isRequired,
@@ -55,7 +55,7 @@ DashboardContainer.propTypes = {
 export default connect(
   state => ({
     products: state.products,
-    basketItems: getTotalBasketItems(state.basket),
+    totalBasketItems: getTotalBasketItems(state.basket),
   }),
   dispatch => ({
     getProducts: () => dispatch(getProducts()),

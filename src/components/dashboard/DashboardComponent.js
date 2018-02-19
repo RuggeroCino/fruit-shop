@@ -14,7 +14,7 @@ const DashboardComponent = (props) => {
       style={{marginBottom: 40}}
     >
       <Header
-        basketItems={props.basketItems}
+        totalBasketItems={props.totalBasketItems}
         onCartClick={props.onCartClick}
       />
       <FlexContainer
@@ -35,7 +35,7 @@ const DashboardComponent = (props) => {
 
 DashboardComponent.propTypes = {
   products: PropTypes.array.isRequired,
-  basketItems: PropTypes.number.isRequired,
+  totalBasketItems: PropTypes.number.isRequired,
   onCartClick: PropTypes.func.isRequired,
   isFetchingProducts: PropTypes.bool.isRequired,
   onAddClick: PropTypes.func.isRequired,
