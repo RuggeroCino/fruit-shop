@@ -9,6 +9,7 @@ class ProductsContainer extends Component {
       <ProductsComponent
         products={this.props.products}
         onAddClick={this.props.onAddClick}
+        isFetchingProducts={this.props.isFetchingProducts}
       />
     );
   }
@@ -17,6 +18,7 @@ class ProductsContainer extends Component {
 ProductsContainer.propTypes = {
   products: PropTypes.array.isRequired,
   onAddClick: PropTypes.func.isRequired,
+  isFetchingProducts: PropTypes.bool.isRequired,
 };
 
 export default ProductsContainer;

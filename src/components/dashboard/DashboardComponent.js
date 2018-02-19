@@ -27,6 +27,7 @@ const DashboardComponent = (props) => {
         <ProductsContainer
           products={props.products}
           onAddClick={props.onAddClick}
+          isFetchingProducts={props.isFetchingProducts}
         />
       </FlexContainer>
     </FlexContainer>
