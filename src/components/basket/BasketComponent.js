@@ -1,9 +1,12 @@
 import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
 import PropTypes from 'prop-types';
 
 import FlexContainer from '../../shared/FlexContainer';
 import Header from '../../shared/Header';
 import BodyText from '../../shared/BodyText';
+
+import BasketItemContainer from './BasketItemContainer';
 
 const BasketComponent = (props) => {
   return (
@@ -17,12 +20,24 @@ const BasketComponent = (props) => {
         padding={true}
         maxWidth={true}
         direction="column"
-        align="center"
+        align="flex-start"
         style={{width: '100%'}}
       >
         <BodyText title={true}>
           Your basket
         </BodyText>
+        {props.basketProducts.map(product =>
+          <BasketItemContainer
+            key={product.id}
+            product={product}
+          />
+        )}
+        <RaisedButton
+          label="Back"
+          primary={true}
+          onClick={props.onBackClick}
+          style={{marginTop: 30}}
+        />
       </FlexContainer>
     </FlexContainer>
   );
@@ -31,6 +46,7 @@ const BasketComponent = (props) => {
 BasketComponent.propTypes = {
   totalBasketItems: PropTypes.number.isRequired,
   basketProducts: PropTypes.array.isRequired,
+  onBackClick: PropTypes.func.isRequired,
 };
 
 export default BasketComponent;
