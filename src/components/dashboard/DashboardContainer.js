@@ -14,7 +14,9 @@ import DashboardComponent from './DashboardComponent';
 
 class DashboardContainer extends Component {
   componentWillMount() {
-    this.props.getProducts();
+    if (this.props.products.products.length === 0) {
+      this.props.getProducts();
+    }
   }
 
   onAddClick = (product, quantity) => {
