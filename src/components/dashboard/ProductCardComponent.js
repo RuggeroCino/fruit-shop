@@ -6,6 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import { Discounts } from '../../constants/Discounts';
 
 import TextField from '../../shared/TextField';
+import FlexContainer from '../../shared/FlexContainer';
 
 const getProductPrice = (product) => {
   let price = `Price: ${product.price} CHF`;
@@ -17,20 +18,27 @@ const getProductPrice = (product) => {
 };
 
 const ProductCardComponent = (props) => {
+  let product = props.product;
+
   return (
     <Card style={styles.ProductCard}>
       <CardMedia>
         <img
-          src={props.product.image}
+          src={product.image}
           alt="Product"
         />
       </CardMedia>
       <CardTitle
-        title={props.product.name}
-        subtitle={props.product.type}
+        title={product.name}
+        subtitle={product.type}
       />
-      <CardText>{props.product.description}</CardText>
-      <CardText>{getProductPrice(props.product)}</CardText>
+      <CardText>
+        {product.description}
+      </CardText>
+      <CardText>
+        Price: {product.price} CHF
+        {product.discount && ` (${Discounts[product.discount].description})`}
+      </CardText>
       <CardActions>
         <TextField
           type="number"
@@ -43,7 +51,7 @@ const ProductCardComponent = (props) => {
         <RaisedButton
           primary={true}
           label="Add to cart"
-          onClick={() => props.onAddClick(props.product, props.quantity)}
+          onClick={() => props.onAddClick(product, props.quantity)}
         />
       </CardActions>
     </Card>
