@@ -29,3 +29,8 @@ export const products = (state = defaultState, action) => {
       return state;
   }
 };
+
+export const getProductById = (state, id) => {
+  return state.products
+    .find(product => product.id === id);
+};
