@@ -11,7 +11,7 @@ class FruitShopService {
       );
     } else {
       return networkService
-        .get(`${configService.getApiServer()}/products`);
+        .get(`${configService.getApiServer()}/api/products`);
     }
   }
 }
