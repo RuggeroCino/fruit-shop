@@ -3,6 +3,13 @@
   color: white;
 }
 
+.Header-shopping-cart-button {
+  margin-bottom: 5px;
+}
+.Header-shopping-cart-button div {
+  color: white;
+}
+
 .Header-shopping-cart-logo {
   width: 28px;
   height: 28px;
