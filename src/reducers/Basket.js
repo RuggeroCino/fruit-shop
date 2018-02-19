@@ -1,6 +1,6 @@
 const defaultState = {
   productIds: [],
-  basket: {},
+  items: {},
 };
 
 export const basket = (state = defaultState, action) => {
@@ -12,20 +12,20 @@ export const basket = (state = defaultState, action) => {
 
       return {
         ...state,
-        productIds: !state.basket[productId] ?
+        productIds: !state.items[productId] ?
             [ ...state.productIds, productId] :
             state.productIds,
-        basket: {
-          ...state.basket,
-          [productId]: (state.basket[productId] || 0) + payload.quantity
+        items: {
+          ...state.items,
+          [productId]: (state.items[productId] || 0) + payload.quantity
         },
       };
     }
     case 'basket.removeProduct':
       return {
         ...state,
-        basket: {
-          ...state.basket,
+        items: {
+          ...state.items,
           [payload.productId]: 0,
         }
       };
@@ -34,9 +34,9 @@ export const basket = (state = defaultState, action) => {
   }
 };
 
-export const getTotalBasketItems = (basketState) => {
-  return basketState.productIds
+export const getTotalBasketItems = (state) => {
+  return state.productIds
     .reduce((accumulator, currentValue) => {
-      return accumulator + basketState.basket[currentValue];
+      return accumulator + state.basket[currentValue];
     }, 0);
 };
