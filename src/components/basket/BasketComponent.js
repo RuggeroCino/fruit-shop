@@ -30,6 +30,7 @@ const BasketComponent = (props) => {
           <BasketItemContainer
             key={product.id}
             product={product}
+            onRemoveClick={props.onRemoveClick}
           />
         )}
         <BodyText bold={true}>
@@ -50,6 +51,7 @@ BasketComponent.propTypes = {
   totalBasketItems: PropTypes.number.isRequired,
   basketProducts: PropTypes.array.isRequired,
   totalBasketPrice: PropTypes.number.isRequired,
+  onRemoveClick: PropTypes.func.isRequired,
   onBackClick: PropTypes.func.isRequired,
 };
 

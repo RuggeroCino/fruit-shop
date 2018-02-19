@@ -1,10 +1,12 @@
 import React from 'react';
+import IconButton from 'material-ui/IconButton';
 import PropTypes from 'prop-types';
 
 import FlexContainer from '../../shared/FlexContainer';
 import BodyText from '../../shared/BodyText';
 
 import discountImg from '../../assets/img/discount.png';
+import deleteIcon from '../../assets/icons/delete-black.svg';
 
 const BasketItemComponent = (props) => {
   let product = props.product;
@@ -40,6 +42,12 @@ const BasketItemComponent = (props) => {
             alt="Discount"
           />
         }
+        <IconButton onClick={() => props.onRemoveClick(product.id)}>
+          <img
+            src={deleteIcon}
+            alt="Delete"
+          />
+        </IconButton>
       </FlexContainer>
     </FlexContainer>
   );
@@ -48,13 +56,14 @@ const BasketItemComponent = (props) => {
 BasketItemComponent.propTypes = {
   product: PropTypes.object.isRequired,
   totalProductPrice: PropTypes.number.isRequired,
+  onRemoveClick: PropTypes.func.isRequired,
 };
 
 const styles = {
   BasketItem: {
     position: 'relative',
     width: '80%',
-    padding: '10px 40px 10px 10px',
+    padding: '10px 60px 10px 10px',
     marginTop: 10,
     marginBottom: 10,
     boxShadow: 'rgba(0, 0, 0, 0.12) 0px 1px 6px',

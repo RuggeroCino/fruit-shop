@@ -12,6 +12,7 @@ class BasketItemContainer extends Component {
       <BasketItemComponent
         product={this.props.product}
         totalProductPrice={this.props.totalProductPrice}
+        onRemoveClick={this.props.onRemoveClick}
       />
     );
   }
@@ -20,6 +21,7 @@ class BasketItemContainer extends Component {
 BasketItemContainer.propTypes = {
   product: PropTypes.object.isRequired,
   totalProductPrice: PropTypes.number.isRequired,
+  onRemoveClick: PropTypes.func.isRequired,
 };
 
 export default connect(

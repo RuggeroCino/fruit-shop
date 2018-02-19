@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import { removeProduct } from '../../actions/Basket';
 import { getTotalBasketItems } from '../../reducers/basket';
 import {
   getBasketProducts,
@@ -17,12 +18,17 @@ class BasketContainer extends Component {
     this.props.history.push(DashboardContainer.route);
   }
 
+  onRemoveClick = (productId) => {
+    this.props.removeProduct(productId);
+  }
+
   render() {
     return (
       <BasketComponent
         totalBasketItems={this.props.totalBasketItems}
         basketProducts={this.props.basketProducts}
         totalBasketPrice={this.props.totalBasketPrice}
+        onRemoveClick={this.onRemoveClick}
         onBackClick={this.onBackClick}
       />
     );
@@ -36,6 +42,7 @@ BasketContainer.propTypes = {
   totalBasketItems: PropTypes.number.isRequired,
   basketProducts: PropTypes.array.isRequired,
   totalBasketPrice: PropTypes.number.isRequired,
+  removeProduct: PropTypes.func.isRequired,
 };
 
 export default connect(
@@ -44,5 +51,6 @@ export default connect(
     basketProducts: getBasketProducts(state),
     totalBasketItems: getTotalBasketItems(state.basket),
     totalBasketPrice: getTotalBasketPrice(state),
-  })
+  }),
+  dispatch => ({ removeProduct: (productId) => dispatch(removeProduct(productId)) })
 )(BasketContainer);

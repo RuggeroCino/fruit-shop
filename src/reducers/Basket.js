@@ -21,14 +21,17 @@ export const basket = (state = defaultState, action) => {
         },
       };
     }
-    case 'basket.removeProduct':
-      return {
-        ...state,
-        items: {
-          ...state.items,
-          [payload.productId]: 0,
-        }
-      };
+    case 'basket.removeProduct': {
+      let productId = payload;
+
+      let newState = { ...state };
+      let productIndex = newState.productIds.indexOf(productId);
+
+      newState.productIds.splice(productIndex, 1);
+      delete newState.items[productId];
+
+      return newState;
+    }
     default:
       return state;
   }
