@@ -34,7 +34,7 @@ const Header = (props) => {
           justify="flex-end"
         >
           <RaisedButton
-            label={props.basketItems > 0 ? props.basketItems : ''}
+            label={props.totalBasketItems > 0 ? props.totalBasketItems : ''}
             labelPosition="before"
             primary={true}
             className="Header-shopping-cart-button"
@@ -52,8 +52,8 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  basketItems: PropTypes.number.isRequired,
-  onCartClick: PropTypes.func.isRequired,
+  totalBasketItems: PropTypes.number.isRequired,
+  onCartClick: PropTypes.func,
 };
 
 export default Header;
