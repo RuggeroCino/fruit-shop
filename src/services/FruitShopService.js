@@ -7,7 +7,7 @@ class FruitShopService {
   getProducts = () => {
     if (
       process.env.REACT_APP_FAKE_BACKEND === 'true' &&
-      process.env.NODE_ENV === 'developent'
+      process.env.NODE_ENV === 'development'
     ) {
       return new Promise((resolve) =>
         setTimeout(() => resolve(Products), 2000)
