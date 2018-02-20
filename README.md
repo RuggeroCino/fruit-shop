@@ -1,8 +1,8 @@
-# Fruit Shop
+# Fruit Shop - Frontend
 
 Simple Fruit Shop web application using React, Redux and Material UI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+[This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)]
 
 ## Requirements
 
@@ -15,4 +15,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Install the dependencies: `yarn install`
 * Run the project: `yarn start` or `yarn run start`
 
+## Connect to fruit-shop-backend
+
+* Set the variable `REACT_APP_FAKE_BACKEND=false` on the .env file
+* Run the [fruit-shop-backend](https://github.com/RuggeroCino/fruit-shop-backend)
 
