@@ -5,7 +5,10 @@ import { Products } from '../constants/mock/Products';
 
 class FruitShopService {
   getProducts = () => {
-    if (process.env.REACT_APP_FAKE_BACKEND === 'true' && process.env.NODE_ENV === 'development') {
+    if (
+      process.env.REACT_APP_FAKE_BACKEND === 'true' &&
+      process.env.NODE_ENV === 'developent'
+    ) {
       return new Promise((resolve) =>
         setTimeout(() => resolve(Products), 2000)
       );

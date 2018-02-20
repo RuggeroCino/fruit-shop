@@ -1,3 +1,5 @@
+import { configService } from '../services/ConfigService';
+
 import { Discounts } from '../constants/Discounts';
 
 const defaultState = {
@@ -18,7 +20,12 @@ export const products = (state = defaultState, action) => {
     case 'product.getProductsSuccess':
       return {
         ...state,
-        products: payload,
+        products: payload.map(product => {
+          return {
+            ...product,
+            image: configService.getApiServer() + product.image,
+          };
+        }),
         isFetchingProducts: false,
       };
     case 'product.getProductsFailure':
