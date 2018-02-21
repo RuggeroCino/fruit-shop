@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { removeProduct } from '../../actions/Basket';
+import { removeProduct } from '../../state/basket';
 import { getTotalBasketItems } from '../../reducers/basket';
 import {
   getBasketProducts,

@@ -1,6 +1,6 @@
-import { configService } from '../services/ConfigService';
+import { configService } from '../../services/ConfigService';
 
-import { Discounts } from '../constants/Discounts';
+import { Discounts } from '../../constants/Discounts';
 
 const defaultState = {
   isFetchingProducts: false,

@@ -2,9 +2,9 @@ import {
   products,
   getProductById,
   getTotalProductPrice,
-} from './products';
-import { basket } from './basket';
-import { notification } from './notification';
+} from './product/product-reducers';
+import { basket } from './basket/basket-reducers';
+import { notification } from './notification/notification-reducers';
 
 export const reducers = {
   products,

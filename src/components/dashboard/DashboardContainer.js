@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import { getProducts } from '../../actions/Product';
-import { addProduct } from '../../actions/Basket';
-import { showNotification } from '../../actions/Notification';
+import { getProducts } from '../../state/product';
+import { addProduct } from '../../state/basket';
+import { showNotification } from '../../state/notification';
 import { getTotalBasketItems } from '../../reducers/basket';
 
 import BasketContainer from '../basket/BasketContainer';
