@@ -6,3 +6,6 @@ export {
   addProduct,
   removeProduct,
 } from './basket-actions';
+
+// Selectors
+export { getTotalBasketItems } from './basket-selectors';

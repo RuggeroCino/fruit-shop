@@ -4,9 +4,11 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { getProducts } from '../../state/product';
-import { addProduct } from '../../state/basket';
 import { showNotification } from '../../state/notification';
-import { getTotalBasketItems } from '../../reducers/basket';
+import {
+  addProduct,
+  getTotalBasketItems,
+} from '../../state/basket';
 
 import BasketContainer from '../basket/BasketContainer';
 

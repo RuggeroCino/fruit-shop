@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { removeProduct } from '../../state/basket';
-import { getTotalBasketItems } from '../../reducers/basket';
+import {
+  removeProduct,
+  getTotalBasketItems,
+} from '../../state/basket';
+
 import {
   getBasketProducts,
   getTotalBasketPrice,
-} from '../../reducers/reducers';
+} from '../../state/reducers';
 
 import DashboardContainer from '../dashboard/DashboardContainer';
 
